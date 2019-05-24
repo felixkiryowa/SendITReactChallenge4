@@ -4,8 +4,8 @@
   "description": "Send-IT react Application",
   "main": "index.js",
   "scripts": {
-      "start": "webpack-dev-server --mode development --open --hot",
-      "build": "webpack --mode --production"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode --production"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,12 @@
   "homepage": "https://github.com/felixkiryowa/SendITReactChallenge4#readme",
   "dependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
