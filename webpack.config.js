@@ -12,11 +12,32 @@ module.exports = {
   },
   module: {
       rules : [
-        {
-            test: /\.(js)$/,
-            exclude: /node_modules/,
-            use: 'babel-loader',
-        } 
+      {
+          test: /\.(js)$/,
+          exclude: /node_modules/,
+          use: 'babel-loader',
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader?classPrefix'
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
+      },
       ]
   },
   plugins: [
