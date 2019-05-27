@@ -5,9 +5,26 @@
  * General styles
  */
 
+ .reg-button {
+     background-color: #630c1b;
+     color:#fff;
+ }
+
+ .reg-button:hover {
+     color:#fff;
+     background-color: #000;
+ }
+
+ .reg-container {
+   border: 2px solid black;
+ }
 .card-container.card {
     max-width: 350px;
     padding: 40px 40px;
+}
+
+.custom-card-color {
+    background-color: #000;
 }
 
 .btn {
@@ -138,3 +155,6 @@
 .login-btn {
     background-color: #630c1b;
 }
+
+// Signing UP Form
+img {width:100%;}

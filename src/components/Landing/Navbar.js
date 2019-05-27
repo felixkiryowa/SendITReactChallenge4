@@ -1,28 +1,30 @@
 import React from 'react';
+import HamburgeMenu from '../../images/Hamburger_icon.png';
 import './landing.scss';
 
  const Navbar = () =>  {
     return (
-        <nav className="navbar navbar-default custom-navbar">
-        <div className="container-fluid"> 
-            <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span className="sr-only">Toggle navigation</span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-            </button>
+        <nav className="navbar navbar-expand-lg custom-navbar">
             <a className="navbar-brand" href="#">SEND-IT</a>
-            </div>
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul className="nav navbar-nav navbar-right">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/register">Sign Up</a></li>
-                    <li><a href="/login">Login</a></li>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <img className="navbar-toggler-icon custom-image" src={ HamburgeMenu} />
+            </button>
+            <div id="navbarNavDropdown" className="navbar-collapse collapse">
+                <ul className="navbar-nav mr-auto"> 
+                </ul>
+                <ul className="navbar-nav">
+                    <li className="nav-item">
+                        <a className="nav-link" href="/">Home</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/login">Login</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/register">Sign Up</a>
+                    </li>
                 </ul>
             </div>
-       </div>
-    </nav>
+        </nav>
     )
 }
 

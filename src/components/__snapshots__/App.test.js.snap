@@ -1,7 +1,196 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should render without crashing 1`] = `
-<div>
-  SEND-IT
-</div>
+Array [
+  <nav
+    className="navbar navbar-expand-lg custom-navbar"
+  >
+    <a
+      className="navbar-brand"
+      href="#"
+    >
+      SEND-IT
+    </a>
+    <button
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      className="navbar-toggler"
+      data-target="#navbarNavDropdown"
+      data-toggle="collapse"
+      type="button"
+    >
+      <img
+        className="navbar-toggler-icon custom-image"
+        src={Object {}}
+      />
+    </button>
+    <div
+      className="navbar-collapse collapse"
+      id="navbarNavDropdown"
+    >
+      <ul
+        className="navbar-nav mr-auto"
+      />
+      <ul
+        className="navbar-nav"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/login"
+          >
+            Login
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/register"
+          >
+            Sign Up
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <div>
+    <div>
+      <section
+        className="sec1"
+      >
+        <div
+          className="centered"
+        >
+          <div
+            className="show_text_on_top_of_image"
+          >
+            <h1
+              align="center"
+            >
+              Your Welcome
+            </h1>
+            <h1
+              align="center"
+            >
+              To
+            </h1>
+            <h1
+              align="center"
+            >
+              SendIT
+            </h1>
+            <br />
+            <p
+              align="center"
+              className="slogan"
+            >
+              Sit Back And Relax And Watch Us As We Deliver Your Order
+            </p>
+            <p
+              align="center"
+              className="slogan"
+            >
+              Reach US :+257098976
+            </p>
+            <p
+              align="center"
+              className="slogan"
+            >
+              Email : info@sendit.ug
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <br />
+    <br />
+    <div>
+      <section
+        className="container-1"
+      >
+        <div
+          className="left"
+        >
+          <div
+            className="thumb"
+          />
+          <h3
+            align="center"
+            className="dive_headers"
+          >
+            <b>
+              Fast Service
+            </b>
+          </h3>
+          <hr />
+          <p
+            align="center"
+            className="style_paragraphs"
+          >
+            We deliver goods with in no time ,through our great employees ready to deliver goods 24/7
+          </p>
+        </div>
+        <div
+          className="left"
+        >
+          <div
+            className="thumb1"
+          />
+          <h3
+            align="center"
+            className="dive_headers"
+          >
+            <b>
+              We Deliver Your Order
+            </b>
+          </h3>
+          <hr />
+          <p
+            align="center"
+            className="style_paragraphs"
+          >
+            We deliver goods at your door any time of the day, whichever part of the country.
+          </p>
+        </div>
+        <div
+          className="left"
+        >
+          <div
+            className="thumb2"
+          />
+          <h3
+            align="center"
+            className="dive_headers"
+          >
+            <b>
+               Secured 
+            </b>
+          </h3>
+          <hr />
+          <p
+            align="center"
+            className="style_paragraphs"
+          >
+            Sit back and relax as no body is to tamper with any of your goods in a aparcel.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>,
+]
 `;
