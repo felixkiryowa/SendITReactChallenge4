@@ -3,6 +3,8 @@ import { notify } from 'react-notify-toast';
 import {
     AUTHENTICATION_SUCCESS,
     AUTHENTICATION_ERROR,
+    SIGNUP_FAILURE,
+    SIGNUP_SUCCESS
 
 } from './types';
 
@@ -15,6 +17,16 @@ const signInFailure = err => ({
 
 const signInSuccess = response => ({
     type: AUTHENTICATION_SUCCESS,
+    payload: response.data,
+});
+
+const signUpFailure = err => ({
+    type: SIGNUP_FAILURE,
+    payload: err,
+});
+
+const signUpSuccess = response => ({
+    type: SIGNUP_SUCCESS,
     payload: response.data,
 });
 
@@ -32,4 +44,17 @@ export const signInAction = (
     }).catch((err) => {
         dispatch(signInFailure(err.response.data.login_message.message));
         notify.show(err.response.data.login_message.message, 'error', 4000);
+    });
+
+export const signupAction = (
+    signupData,
+    props,
+) => dispatch => axios.post(`${baseURL}auth/signup`, signupData)
+    .then((response) => {
+        dispatch(signUpSuccess(response));
+        notify.show(response.data.message, 'success', 4000);
+        props.history.push('/login');
+    }).catch((err) => {
+        dispatch(signUpFailure(err.response.data.login_message.message));
+        notify.show(err.response.data.message, 'error', 4000);
     });

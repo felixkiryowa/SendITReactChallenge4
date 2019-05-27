@@ -1,7 +1,24 @@
 .custom-navbar {
-   background-color: black;
+    background-color: black;
     margin-bottom: 0px;
     border-bottom: 2px solid #630c1b;
+    a {
+        color: #fff;
+    }
+    div {
+        ul {
+            li {
+                a{
+                    color:#fff;
+                }
+            }
+        }
+    }
+
+}
+
+.custom-image {
+    background-color: #fff;
 }
 .customer_profile {
   overflow-y: auto; }

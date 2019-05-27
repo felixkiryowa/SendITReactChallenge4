@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Navbar from '../components/Landing/Navbar';
 import LandingPageComponent from '../components/Landing/Landing';
-import LoginComponent from './Auth/Login';
+import LoginPageComponent from './Auth/Login';
+import RegisterPageComponent from './Auth/Register';
+
 
 
 class Routes extends Component {
@@ -18,7 +20,8 @@ class Routes extends Component {
                     <Navbar />
                     <Switch>
                         <Route exact path="/" component={LandingPageComponent} />
-                        <Route exact path="/login" component={LoginComponent} />
+                        <Route exact path="/login" component={LoginPageComponent} />
+                        <Route exact path="/register" component={RegisterPageComponent} />
                     </Switch>
                 </Router>
             </>
