@@ -1,10 +1,13 @@
-import axios  from 'axios';
+import axios from 'axios';
 import { notify } from 'react-notify-toast';
 import {
     CREATE_PARCEL_FAILURE,
     CREATE_PARCEL_SUCCESS,
+    GET_PARCEL_ORDERS_SUCCESS,
+    GET_PARCEL_ORDERS_FAILURE,
 
 } from './types';
+
 
 const createParcelFailure = err => ({
     type: CREATE_PARCEL_FAILURE,
@@ -15,6 +18,17 @@ const createParcelSuccess = response => ({
     type: CREATE_PARCEL_SUCCESS,
     payload: response,
 });
+
+const getUserParcelsFailure = err => ({
+    type: GET_PARCEL_ORDERS_FAILURE,
+    payload: err,
+});
+
+const getUserParcelSuccess = response => {
+    return {
+    type: GET_PARCEL_ORDERS_SUCCESS,
+    payload: response,
+}};
 
 const { baseURL } = process.env;
 
@@ -39,7 +53,11 @@ export const createParcel = (
         notify.show('Errors have occured', 'error', 4000);
     });
 
-
-
-
-
+export const getUserParcelOrders = () => dispatch => axios.get(`${baseURL}users/parcels`, Header)
+    .then((response) => {
+        dispatch(getUserParcelSuccess(response.data));
+        props.history.push('/orders');
+    }).catch((err) => {
+        dispatch(getUserParcelsFailure(err.data.message));
+        notify.show('Errors have occured', 'error', 4000);
+    });

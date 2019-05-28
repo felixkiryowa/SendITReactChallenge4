@@ -12,17 +12,39 @@ import './landing.scss';
             <div id="navbarNavDropdown" className="navbar-collapse collapse">
                 <ul className="navbar-nav mr-auto"> 
                 </ul>
-                <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <a className="nav-link" href="/">Home</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/login">Login</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/register">Sign Up</a>
-                    </li>
-                </ul>
+               
+                    {
+                        localStorage.getItem('isAuthenticated') ?
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/orders">Order Details</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Customer Profiles</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/" onClick={ logoutUser }>Logout ( { localStorage.getItem('username') })</a>
+                            </li>
+                        </ul>
+
+                        :
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a className="nav-link" href="/">Home</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/login">Login</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/register">Sign Up</a>
+                            </li>
+                        </ul>
+
+                    }
+
             </div>
         </nav>
     )

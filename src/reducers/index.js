@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import authReducer from './authReducer';
-import parceleReducer from './parcleReducer';
+import parcleReducer from './parcleReducer';
 
 export default combineReducers({
     auth: authReducer,
-    parcel: parceleReducer,
+    parcels: parcleReducer
 });
