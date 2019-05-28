@@ -10,7 +10,7 @@ import {
 const initialState = {};
 
 export default function (state = initialState, action) {
-    switch (action) {
+    switch (action.type) {
         case AUTHENTICATION_SUCCESS:
             return { ...state, authenticated: true };
         case AUTHENTICATION_ERROR:

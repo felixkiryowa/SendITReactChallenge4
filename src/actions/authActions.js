@@ -38,7 +38,8 @@ export const signInAction = (
         dispatch(signInSuccess(response));
         localStorage.setItem('token_generated', response.data.login_message.token_generated);
         localStorage.setItem('user_role', response.data.login_message.user_role);
-        localStorage.setItem('username', response.data.login_message.username);             
+        localStorage.setItem('username', response.data.login_message.username); 
+        localStorage.setItem('isAuthenticated', true);             
         props.history.push('/dashboard');
         notify.show(response.data.login_message.message, 'success', 4000);
     }).catch((err) => {

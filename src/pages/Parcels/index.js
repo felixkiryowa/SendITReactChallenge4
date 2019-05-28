@@ -52,6 +52,7 @@ class Parcels extends Component {
     }
 
     render() {
+        console.log('AUTHENTICATED.............',this.props.authenticated);
         return (
             <div>
                 <CreateParcelsComponent 
@@ -72,7 +73,11 @@ Parcels.propTypes = {
     }).isRequired,
 };
 
+const mapStateToProps = state => ({
+    authenticated: state.auth.authenticated,
+});
 
-export default  connect(null, {
+
+export default  connect(mapStateToProps, {
     createOrder: createParcel
 })(Parcels);
