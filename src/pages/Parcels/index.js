@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { createParcel } from '../../actions//parcelActions';
 import CreateParcelsComponent from '../../components/Parcels/';
 
-class Parcels extends Component {
+export class Parcels extends Component {
 
     constructor() {
         super();
@@ -19,6 +19,7 @@ class Parcels extends Component {
         this.handleToPlace = this.handleToPlace.bind(this);
         this.handleWeightChange = this.handleWeightChange.bind(this);
     }
+
     handleFromPlace = (event) => {
         this.setState({
             order_pickup: event.suggestion.value
@@ -40,8 +41,6 @@ class Parcels extends Component {
             "parcel_destination_address": this.state.order_dropoff
         }
         createOrder(parcelData, this.props);
-        console.log(parcelData);
-        
     }
 
     handleWeightChange = (event) => {
@@ -52,7 +51,6 @@ class Parcels extends Component {
     }
 
     render() {
-        console.log('AUTHENTICATED.............',this.props.authenticated);
         return (
             <div>
                 <CreateParcelsComponent 
@@ -78,6 +76,6 @@ const mapStateToProps = state => ({
 });
 
 
-export default  connect(mapStateToProps, {
+export default connect(mapStateToProps, {
     createOrder: createParcel
 })(Parcels);

@@ -22,7 +22,7 @@ const  Login = (
                 <input 
                     type="text" 
                     id="inputEmail" 
-                    className="form-control" 
+                    className="form-control UsernameInput" 
                     placeholder="Enter Username"
                     name="username"
                     onChange={ handleUsernameChange }
@@ -33,7 +33,7 @@ const  Login = (
                 <input 
                     type="password" 
                     id="inputEmail" 
-                    className="form-control" 
+                    className="form-control PasswordInput" 
                     placeholder="Enter Password"
                     value={ password }
                     onChange={ handlePasswordChange }

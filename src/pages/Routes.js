@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import ProtectedRoute from "../../helpers";
 import Navbar from '../components/Landing/Navbar';
 import LandingPageComponent from '../components/Landing/Landing';
 import LoginPageComponent from './Auth/Login';
@@ -15,11 +16,12 @@ class Routes extends Component {
         this.state = {
         };
     }
+
     render() {
         return (
             <>
                 <Router>
-                    <Navbar />
+                    <Navbar logoutUser={this.logoutUser} />
                     <Switch>
                         <Route exact path="/" component={LandingPageComponent} />
                         <Route exact path="/login" component={LoginPageComponent} />

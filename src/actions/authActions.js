@@ -1,10 +1,11 @@
 import axios from 'axios';
-import { notify } from 'react-notify-toast';
+import { toast } from 'react-toastify';
 import {
     AUTHENTICATION_SUCCESS,
     AUTHENTICATION_ERROR,
     SIGNUP_FAILURE,
-    SIGNUP_SUCCESS
+    SIGNUP_SUCCESS,
+    LOGOUT_USER,
 
 } from './types';
 
@@ -33,18 +34,17 @@ const signUpSuccess = response => ({
 export const signInAction = (
     loginData,
     props,
-) => dispatch => axios.post(`${baseURL}auth/login`, loginData)
+   ) => dispatch => axios.post(`${baseURL}auth/login`, loginData)
     .then((response) => {
         dispatch(signInSuccess(response));
         localStorage.setItem('token_generated', response.data.login_message.token_generated);
         localStorage.setItem('user_role', response.data.login_message.user_role);
         localStorage.setItem('username', response.data.login_message.username); 
-        localStorage.setItem('isAuthenticated', true);             
+        toast.success(response.data.login_message.message, 'success', 4000);          
         props.history.push('/dashboard');
-        notify.show(response.data.login_message.message, 'success', 4000);
     }).catch((err) => {
         dispatch(signInFailure(err.response.data.login_message.message));
-        notify.show(err.response.data.login_message.message, 'error', 4000);
+        toast.error(err.response.data.login_message.message, 'error', 4000);
     });
 
 export const signupAction = (
@@ -53,9 +53,19 @@ export const signupAction = (
 ) => dispatch => axios.post(`${baseURL}auth/signup`, signupData)
     .then((response) => {
         dispatch(signUpSuccess(response));
-        notify.show(response.data.message, 'success', 4000);
+        toast.success(response.data.message);
         props.history.push('/login');
     }).catch((err) => {
         dispatch(signUpFailure(err.response.data.login_message.message));
-        notify.show(err.response.data.message, 'error', 4000);
+        toast.error(err.response.data.message, 'error', 4000);
     });
+
+// Log user out
+export const signOutUser = () => dispatch => {
+    localStorage.clear();
+    dispatch({
+        type: LOGOUT_USER,
+        payload: false,
+    });
+
+}

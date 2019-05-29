@@ -8,6 +8,13 @@ const LandingPage = () => (
       <br></br>
       <br></br>
       <BaseContent /> 
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
    </div>
 
 );

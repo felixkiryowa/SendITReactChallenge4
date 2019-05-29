@@ -1,6 +1,5 @@
 import React from 'react';
 import Place from 'react-algolia-places';
-import { createParcel  } from '../../actions/parcelActions';
 import '../Auth/auth.scss';
 
 
@@ -33,6 +32,7 @@ const Dashboard = (
                                 <div className="form-group col-md-4">
                                     <Place
                                         className="search_box"
+                                        id="order_pickup"
                                         name="order_pickup"
                                         placeholder="Parcel PickUp Location"
                                         onChange={ handleFromPlace }
@@ -43,6 +43,7 @@ const Dashboard = (
                                     <Place
                                         className="search_box"
                                         name="order_dropoff"
+                                        id="order_dropoff"
                                         placeholder="Parcel DropOff Location"
                                         onChange={ handleToPlace }
                                         required
@@ -53,9 +54,10 @@ const Dashboard = (
                                         type="number"
                                         className="form-control"
                                         name="weight"
+                                        id="weight"
                                         placeholder="Parcel Weight"
                                         onChange={ handleWeightChange }
-                                        required
+                                        
                                     />
                                 </div>
                             </div>

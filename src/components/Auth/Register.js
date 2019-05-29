@@ -27,6 +27,7 @@ const Register = (
 								<div className="form-group col-md-6">
 									<input
 										name="firstname"
+                                        id="FirstName"
 										placeholder="First Name"
 										className="form-control"
 										type="text"

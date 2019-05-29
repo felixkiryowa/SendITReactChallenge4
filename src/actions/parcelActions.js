@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { notify } from 'react-notify-toast';
+import { toast } from 'react-toastify';
 import {
     CREATE_PARCEL_FAILURE,
     CREATE_PARCEL_SUCCESS,
@@ -47,17 +47,16 @@ export const createParcel = (
     .then((response) => {
         dispatch(createParcelSuccess(response.data.message));
         props.history.push('/orders');
-        notify.show(response.data.message, 'success', 4000);
+        toast.success(response.data.message, 'success', 4000);
     }).catch((err) => {
         dispatch(createParcelFailure(err.response.data.message));
-        notify.show('Errors have occured', 'error', 4000);
+        toast.error('Errors have occured', 'error', 4000);
     });
 
 export const getUserParcelOrders = () => dispatch => axios.get(`${baseURL}users/parcels`, Header)
     .then((response) => {
         dispatch(getUserParcelSuccess(response.data));
-        props.history.push('/orders');
     }).catch((err) => {
-        dispatch(getUserParcelsFailure(err.data.message));
-        notify.show('Errors have occured', 'error', 4000);
+        dispatch(getUserParcelsFailure("Errors have occured"));
+        toast.error('Errors have occured', 'error', 4000);
     });

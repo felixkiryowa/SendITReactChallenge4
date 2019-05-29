@@ -9,7 +9,7 @@ export class Login extends Component {
 
     constructor() {
         super();
-        this.state ={
+        this.state = {
             username:'',
             password: '',
             errors : {
@@ -43,8 +43,6 @@ export class Login extends Component {
     }
 
     render() {
-        console.log(this.props.errorMessage);
-   
         return (
             <div>
                 <LoginPage

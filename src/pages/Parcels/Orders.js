@@ -4,18 +4,14 @@ import PropTypes from 'prop-types';
 import { getUserParcelOrders } from '../../actions//parcelActions';
 import CustomerOrdersComponent from '../../components/Parcels/CustomerOrders';
 
-class Orders extends Component {
+export class Orders extends Component {
 
-  
-    componentWillMount() {
+    componentDidMount() {
         const { userOrders } = this.props;
         userOrders();
     }
 
-
     render() {
-        console.log('come onooooooooooo.............',this.props.parcels);
-        
         return (
             <div>
                 <CustomerOrdersComponent parcelOrders={ this.props.parcels } />
@@ -34,7 +30,6 @@ Orders.propTypes = {
 const mapStateToProps = state => ({
     parcels: state.parcels.parcels,
 });
-
 
 export default connect(mapStateToProps, {
     userOrders: getUserParcelOrders,

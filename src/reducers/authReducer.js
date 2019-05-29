@@ -2,12 +2,14 @@ import {
     AUTHENTICATION_SUCCESS,
     AUTHENTICATION_ERROR,
     UNAUTHENTICATED,
-    SIGNUP_FAILURE,
-    SIGNUP_SUCCESS
+    SIGNUP_SUCCESS,
+    LOGOUT_USER,
 
 } from '../actions/types';
 
-const initialState = {};
+const initialState = {
+    authenticated: false
+};
 
 export default function (state = initialState, action) {
     switch (action.type) {
@@ -17,10 +19,10 @@ export default function (state = initialState, action) {
             return { ...state, error: action.payload };
         case UNAUTHENTICATED:
             return { ...state, authenticated: false };
+        case LOGOUT_USER:
+            return { ...state, authenticated: false };
         case SIGNUP_SUCCESS:
             return { ...state, message:action.payload };
-        case SIGNUP_FAILURE:
-            return { ...state, error: action.payload }
         default:
             return state;
     }
