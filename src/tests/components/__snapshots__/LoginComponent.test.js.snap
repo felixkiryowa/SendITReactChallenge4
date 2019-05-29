@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sample Articles Component Should render without crashing 1`] = `
+<div
+  className="card card-container"
+>
+  <img
+    className="profile-img-card"
+    id="profile-img"
+    src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+  />
+  <p
+    className="profile-name-card"
+    id="profile-name"
+  />
+  <form
+    className="form-signin"
+    onSubmit={[MockFunction]}
+  >
+    <span
+      className="reauth-email"
+      id="reauth-email"
+    />
+    <input
+      autoFocus={true}
+      className="form-control UsernameInput"
+      id="inputEmail"
+      name="username"
+      onChange={[MockFunction]}
+      placeholder="Enter Username"
+      required={true}
+      type="text"
+      value="Roy22"
+    />
+    <br />
+    <input
+      className="form-control PasswordInput"
+      id="inputEmail"
+      name="password"
+      onChange={[MockFunction]}
+      placeholder="Enter Password"
+      required={true}
+      type="password"
+      value="user123"
+    />
+    <button
+      className="btn btn-lg btn-primary btn-block btn-signin login-btn"
+      type="submit"
+    >
+      Sign in
+    </button>
+  </form>
+  <a
+    className="forgot-password"
+    href="#"
+  >
+    Forgot the password?
+  </a>
+</div>
+`;

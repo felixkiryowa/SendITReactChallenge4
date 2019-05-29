@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sample Articles Component Should render without crashing 1`] = `
+<div
+  className="container table-responsive{-sm|-md|-lg|-xl}"
+  style={
+    Object {
+      "marginTop": "150px",
+    }
+  }
+>
+  <table
+    className="table"
+  >
+    <thead
+      className="thead-dark"
+    >
+      <tr>
+        <th
+          scope="col"
+        >
+          Pick up Address
+        </th>
+        <th
+          scope="col"
+        >
+          Destination Address
+        </th>
+        <th
+          scope="col"
+        >
+          Order Status
+        </th>
+        <th
+          scope="col"
+        >
+          Price
+        </th>
+        <th
+          scope="col"
+        >
+          Created At
+        </th>
+        <th
+          scope="col"
+        >
+          Manage Order
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Kasese, Uganda
+        </td>
+        <td>
+          Kampala, Uganda
+        </td>
+        <td>
+          pending
+        </td>
+        <td>
+          200000
+        </td>
+        <td>
+          Tue, 28 May 2019 08:04:50 GMT
+        </td>
+        <td>
+          <div
+            className="dropdown"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="btn btn-success btn-sm dropdown-toggle"
+              data-toggle="dropdown"
+              id="dropdownMenuButton"
+              type="button"
+            >
+              Action
+            </button>
+            <div
+              aria-labelledby="dropdownMenuButton"
+              className="dropdown-menu"
+            >
+              <a
+                className="dropdown-item"
+                href="#"
+              >
+                Edit 
+                <i
+                  className="far fa-trash-alt"
+                />
+              </a>
+              <a
+                className="dropdown-item"
+                href="#"
+              >
+                Cancel 
+                <i
+                  className="far fa-window-close"
+                />
+              </a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Lugazi, Mukono, Uganda
+        </td>
+        <td>
+          Jinja, Uganda
+        </td>
+        <td>
+          pending
+        </td>
+        <td>
+          250000
+        </td>
+        <td>
+          Tue, 28 May 2019 08:04:50 GMT
+        </td>
+        <td>
+          <div
+            className="dropdown"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="btn btn-success btn-sm dropdown-toggle"
+              data-toggle="dropdown"
+              id="dropdownMenuButton"
+              type="button"
+            >
+              Action
+            </button>
+            <div
+              aria-labelledby="dropdownMenuButton"
+              className="dropdown-menu"
+            >
+              <a
+                className="dropdown-item"
+                href="#"
+              >
+                Edit 
+                <i
+                  className="far fa-trash-alt"
+                />
+              </a>
+              <a
+                className="dropdown-item"
+                href="#"
+              >
+                Cancel 
+                <i
+                  className="far fa-window-close"
+                />
+              </a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

@@ -15,11 +15,12 @@ class Routes extends Component {
         this.state = {
         };
     }
+
     render() {
         return (
             <>
                 <Router>
-                    <Navbar />
+                    <Navbar logoutUser={this.logoutUser} />
                     <Switch>
                         <Route exact path="/" component={LandingPageComponent} />
                         <Route exact path="/login" component={LoginPageComponent} />

@@ -33,15 +33,15 @@ const signUpSuccess = response => ({
 export const signInAction = (
     loginData,
     props,
-) => dispatch => axios.post(`${baseURL}auth/login`, loginData)
+   ) => dispatch => axios.post(`${baseURL}auth/login`, loginData)
     .then((response) => {
         dispatch(signInSuccess(response));
         localStorage.setItem('token_generated', response.data.login_message.token_generated);
         localStorage.setItem('user_role', response.data.login_message.user_role);
         localStorage.setItem('username', response.data.login_message.username); 
-        localStorage.setItem('isAuthenticated', true);             
+        localStorage.setItem('isAuthenticated', true);   
+        notify.show(response.data.login_message.message, 'success', 4000);          
         props.history.push('/dashboard');
-        notify.show(response.data.login_message.message, 'success', 4000);
     }).catch((err) => {
         dispatch(signInFailure(err.response.data.login_message.message));
         notify.show(err.response.data.login_message.message, 'error', 4000);

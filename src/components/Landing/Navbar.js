@@ -2,7 +2,7 @@ import React from 'react';
 import HamburgeMenu from '../../images/Hamburger_icon.png';
 import './landing.scss';
 
- const Navbar = () =>  {
+const Navbar = ({ logoutUser }) =>  {
     return (
         <nav className="navbar navbar-expand-lg custom-navbar">
             <a className="navbar-brand" href="#">SEND-IT</a>
@@ -26,10 +26,9 @@ import './landing.scss';
                                 <a className="nav-link" href="/">Customer Profiles</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/" onClick={ logoutUser }>Logout ( { localStorage.getItem('username') })</a>
+                                <a className="nav-link" href="/" >Logout ( { localStorage.getItem('username') })</a>
                             </li>
                         </ul>
-
                         :
                         <ul className="navbar-nav">
                             <li className="nav-item">

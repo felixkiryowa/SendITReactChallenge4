@@ -1,7 +1,6 @@
 import React from 'react'
 
 const CustomerOrders = ({ parcelOrders }) => {
-     console.log('Artisan......................',parcelOrders);
     return (
         <div className="container table-responsive{-sm|-md|-lg|-xl}" style={{ marginTop: "150px" }}>
             <table className="table">

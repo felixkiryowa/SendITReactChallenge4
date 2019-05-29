@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import RegisterComponent from '../../components/Auth/Register';
 
 
-class Register extends Component {
+export class Register extends Component {
 
     constructor() {
         super();
@@ -74,7 +74,6 @@ class Register extends Component {
         this.checkPasswordMatch(this.state.password, this.state.confirmPassword);
         this.checkValidPhoneNumber(this.state.contact);
         signupUser(newUser, this.props);
-        console.log(newUser);
     }
 
     render() {

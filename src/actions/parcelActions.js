@@ -56,8 +56,7 @@ export const createParcel = (
 export const getUserParcelOrders = () => dispatch => axios.get(`${baseURL}users/parcels`, Header)
     .then((response) => {
         dispatch(getUserParcelSuccess(response.data));
-        props.history.push('/orders');
     }).catch((err) => {
-        dispatch(getUserParcelsFailure(err.data.message));
+        dispatch(getUserParcelsFailure("Errors have occured"));
         notify.show('Errors have occured', 'error', 4000);
     });

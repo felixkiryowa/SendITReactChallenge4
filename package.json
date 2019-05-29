@@ -3,6 +3,16 @@
   "version": "1.0.0",
   "description": "Send-IT react Application",
   "main": "index.js",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!src/__mocks__/",
+      "!src/index.js",
+      "!src/store.js",
+      "!src/setupTests.js"
+    ]
+  },
   "scripts": {
     "start:dev": "webpack-dev-server --mode development --open --hot",
     "start": "node server.js",
@@ -56,6 +66,7 @@
     "eslint-plugin-react": "^7.13.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.8.0",
+    "moxios": "^0.4.0",
     "react-test-renderer": "^16.8.6",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
